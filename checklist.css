@@ -1,0 +1,108 @@
+#container{
+  width: 450px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+#outerdiv{
+  width: 400px;
+  margin-left: 10px;
+  background-color: #FEF0A2;
+  margin-top:-20px;
+  box-shadow: 10px 10px 5px #DBDBDB;
+}
+
+#title{
+	position: relative;
+  line-height: 10px;
+  font-weight: 100;
+  border-bottom: solid #CC5E5E 1px;
+  background-color: 
+}
+h1{
+	padding-top: 10px;
+	font-weight: 100;
+}
+#add-task-div{
+	margin-top: 30px;
+	width: 400px;
+}
+#user-input{
+	width: 290px;
+	height: 40px;
+	margin-left: 25px;
+	margin-top: -25px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 15px;
+	border: none;
+	background-color: #FFFAE3;
+}
+#submit-task{
+	margin-top: -10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	background-color: white;
+	border: none;
+	width: 70px;
+	height: 40px;
+	font-size: 13px;
+	background-color: #FFFAE3;
+}
+
+#list-div{
+	.border: solid black 1px;
+	width: 400px;
+	height: 300px;
+}
+#main-list{
+	list-style-type: none;
+	padding-left: 3px; 
+	margin: 0;
+	line-height:30px;
+	max-height: 300px;
+	overflow: scroll;
+}
+li {
+	border-top: solid #CACBC8 1px;
+}
+#remaining{
+	border-top: 1px solid grey;
+	height: 50px;
+}
+
+
+.delmark{
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	border: 1px solid #CC5E5E;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	font-weight: 400;
+	opacity: 0.5;
+	color: grey;
+	cursor: pointer;
+}
+
+
+#tasks-remaining{
+	margin-top: 10px;
+	float: left;
+	margin-left: 10px;
+}
+
+#completed{
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: #FFFAE3;
+  height: 25px;
+  border: none;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
