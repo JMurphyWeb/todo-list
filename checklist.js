@@ -8,6 +8,7 @@ $(document).ready(function(){
   //automatically run functions\\
   //......................................................................................\\
   
+  //currently no disabling in place
   //$('#completed').prop('disabled',true);
   
   //retrieve old tasks from localstorage
@@ -64,11 +65,14 @@ $(document).ready(function(){
   });
 
 
+//As new tasks are added to the list by the user or loaded from the localstorage
+//the following function will be called each time
+//which will give the appended list items the following functionality
   function applyFunctionality(){
     //hide delete buttons
     $('li').find('.delmark').hide();
 
-
+    //if a checkbox is checked
     $('.cb').click(function(){
       if($(this).is(':checked')){ 
         $(this).parent('li').prop('class', 'checked');
@@ -78,7 +82,7 @@ $(document).ready(function(){
         updateStorage();
         event.isPropagationStopped();
       }
-
+      //checkbox is unchecked
       else { 
         $(this).parent('li').prop('class', '');
         $(this).siblings('#pp').css('text-decoration','none');
@@ -89,46 +93,13 @@ $(document).ready(function(){
       }
     })
 
-
-
-
-  //cross input value and toggle numRemTasks
-/*    
-    var temp =  $('li').find('#cb');
-    temp.click(function() { 
-      alert("here");
-      if (temp.is(':checked')) {
-
-        $(this).parent().prop('class', 'checked');
-        $(this).prop('checked',true);
-          $(this).siblings('#pp').css('text-decoration','line-through');
-        numRemTasks--;
-        updateStorage();
-        $('#completed').prop('disabled',false);   
-        event.isPropagationStopped();
-      
-      } else {
-        alert("made it here");
-        $(this).parent().removeClass('checked');
-        $(this).siblings('#pp').css('text-decoration','none');
-        numRemTasks++;
-        updateStorage();
-        //if(checked tasks === 0){
-          $('#completed').prop('disabled',true);    
-        //}
-        event.isPropagationStopped();
-      }
-    });
-
-    */
-
     //Make all li elements listen for mouse enter
     //mouse enter li element show delete button
     $('li').mouseenter(function(){
       //show delmark and remove li if it is clicked
       $(this).children('.delmark').show();
       $(this).children('.delmark').mouseenter(function(){
-        $(this).fadeTo(200,1);
+        $(this).fadeTo(100,1);
         $(this).click(function(){
           $(this).parent().remove();
           numRemTasks--;
@@ -138,18 +109,18 @@ $(document).ready(function(){
       });
 
       $(this).children('.delmark').mouseleave(function(){
-        $(this).fadeTo(200,0.5);
+        $(this).fadeTo(100,0.5);
       });
     }).mouseleave(function(){
       $(this).children('.delmark').hide();
     });
   }
 
-  //clear local storage
+  /*clear local storage
     $('#clear').click(function(){
       localStorage.clear();
       location.reload();
-  });
+  }); */
 
 
   
